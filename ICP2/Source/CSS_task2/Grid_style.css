@@ -1,0 +1,11 @@
+.flex-container {
+    display: flex;
+    justify-content: center; /* justifying to center */
+}
+.flex-item {
+    margin: 5px;
+    color: white;
+    /* As per the CSS task 2, Each color grid should be 70 × 70 height and width*/
+    height:70px;
+    width:70px
+}
