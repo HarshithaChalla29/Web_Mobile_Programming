@@ -3,11 +3,12 @@
 <head>
     <title>Rock Paper Scissors Game</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!--including CSS file-->
     <link rel="stylesheet" type="text/css" href="RockPaperScissors.css">
     <script type="text/javascript" src="./lib/jquery-3.3.1.min.js"></script>
-
 </head>
 <body style="background-color: #BCBBBB">
+<!-- adding headers and responsive buttons-->
 <div class="container">
     <h1>Rock Paper Scissors</h1>
     <h3 style="text-align: center">Press any button to play the game</h3>
@@ -16,12 +17,12 @@
         <button onclick="rock()" type="button" class="rock btn"><img src="rock.JPG" height="150" width="150"/></button>
         <button onclick="paper()" class="paper btn"><img src="paper.JPG" height="150" width="150"/></button>
         <button onclick="scissors()" class="scissors btn"><img src="scissors.JPG" height="150" width="150"/></button>
-</div><br>
-
-<div style="text-align: center">
-    <label id="Result"> </label>
-</div><br>
-
+    </div><br>
+<!-- Result of the game-->
+    <div style="text-align: center">
+        <label id="Result"> </label>
+    </div><br>
+<!--Displaying scores of the game in table-->
     <table class="center">
         <tr>
             <td colspan="2" style="background-color:lightsalmon">Score</td>
@@ -34,7 +35,7 @@
             <td colspan="2" ><span id="score"></span></td>
         </tr>
     </table>
-
+<!--including javascript-->
     <script src="RockPaperScissors.js"></script>
 </div>
 </body>

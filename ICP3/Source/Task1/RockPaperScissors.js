@@ -6,7 +6,7 @@ function score(){
 }
 setInterval(score, 50);
 
-//rock click
+//code when user clicks rock
 function rock()
 {
     playerRoll = 1;
@@ -27,7 +27,7 @@ function rock()
     }
 }
 
-//paper click
+//code when user clicks paper
 function paper()
 {
     document.getElementById("Result").Text="";
@@ -48,7 +48,7 @@ function paper()
     }
 }
 
-//scissors click
+//code when user clicks scissors
 function scissors()
 {
     playerRoll = 3;
