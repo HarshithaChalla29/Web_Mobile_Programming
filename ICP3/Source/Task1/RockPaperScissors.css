@@ -1,0 +1,39 @@
+.container{
+    background-color: white;
+    border-radius: 3px  ;
+    margin: 50px auto;
+    width: 600px;
+    height: 520px;
+    box-shadow: 3px 3px 30px rgba(0,0,0,0.1);
+}
+.button-row {
+    text-align: center;
+    color: cornflowerblue;
+    margin: 0px auto;
+}
+body {
+    background-color: #f6f6f6;
+}
+
+h1 {
+    text-align: center;
+    color: #e38d13;
+    padding: 40px 0px 10px;
+}
+label{
+    font-size:x-large;
+    background-color: #c8e5bc;
+}
+table, th, td {
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th,tr {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+}
