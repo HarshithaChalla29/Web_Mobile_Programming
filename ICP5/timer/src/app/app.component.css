@@ -1,0 +1,11 @@
+.container{
+  background-color: darkblue;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 3px  ;
+  margin: 50px auto;
+  padding: 5px 5px;
+  width: 20%;
+  height: 200px;
+  box-shadow: 3px 3px 30px rgba(0,0,0,0.1);
+}
