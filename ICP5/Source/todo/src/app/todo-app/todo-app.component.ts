@@ -18,6 +18,7 @@ export class TodoAppComponent {
   //  * add todo
   //  * @memberof TodoAppComponent
   //  */
+
   addTodo(): void {
     if (!this.newTodo) {
       return alert('What do you need to write?');
@@ -27,11 +28,11 @@ export class TodoAppComponent {
     }));
     this.newTodo = '';
   }
-
+//deleting items in todo list
   destroyTodo(todo: Todo): void {
     this.todoService.deleteTodoById(todo.id);
   }
-
+//deleting multiple items in todo list
   destroyAllTodo(): void {
     if (!this.clearCount) {
       return;
@@ -74,11 +75,11 @@ export class TodoAppComponent {
     const todos = this.todos;
     return todos.length && todos.filter(item => item.done).length === todos.length;
   }
-
+//todo list count
   get todoCount(): number {
     return this.todos.filter(item => !item.done).length;
   }
-
+//to clear todo list count
   get clearCount(): number {
     return this.todos.filter(item => item.done).length;
   }

@@ -1,11 +1,11 @@
-
+<!--adding hearder to the page-->
 <header class="header">
     <h1> To Do List for 2021</h1>
     <form class="todo-form" (ngSubmit)="addTodo()">
-<input class="add-todo" [(ngModel)]="newTodo" name="first" appAfterViewFocus placeholder="Add items to be done" required="required" autocomplete="off">
-        <!-- <button type="submit" class=".btn-success" *ngIf="newTodo.length">+</button> -->
+    <input class="add-todo" [(ngModel)]="newTodo" name="first" appAfterViewFocus placeholder="Add items to be done" required="required" autocomplete="off">
     </form>
 </header>
+<!--code for adding to do items-->
 <main class="main" *ngIf="todos.length">
     <ul class="todo-list">
         <li *ngFor="let todo of todos" [class.completed]="todo.done" (dblclick)="editingTodo(todo)">
@@ -18,6 +18,7 @@
         </li>
     </ul>
 </main>
+<!--adding clear all selected items in list-->
 <footer class="footer" *ngIf="todos.length">
     <span class="todo-count">
     <strong>{{ todoCount }}</strong>
