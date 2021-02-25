@@ -20,12 +20,12 @@ export class SearchRecipeComponent implements OnInit {
   geolocationPosition: any;
 
   recepieApi = 'https://api.edamam.com/search?q=';
-  recepieAppid = '&app_id=20142051';
-  recepieKey = '&app_key=f51e46d3bf6aa3d4dfe02c3d07b1c497';
+  recepieAppid = '&app_id=fced779c';
+  recepieKey = '&app_key=465a2aeda05246cb87b9f23c1475319a';
 
   placesApi = 'https://api.foursquare.com/v2/venues/search?';
-  clientdId = 'client_id=U144GWH2VKUIQ1TXDUN0CYXD2FFH5IWB1GGJX3DBXNXXSJ5I';
-  clientSecret = '&client_secret=0G5HVFCPORV4KPCGNQIYDA4Y5J3KZR512MMCMXTNXHA4WLME';
+  clientdId = 'client_id=GUXM2OGC2ZTTSIFNAXHD4APMYBXJ1HBIBPYDTNEVBNGFBX5H';
+  clientSecret = '&client_secret=SBEJ3WSOH2A0O0Z41KN2MP2G3OLNLQWMOMNOT4JWSJMA1H4V';
   version = '&v=20180323';
   near = '&near=';
   query = '&query=';
