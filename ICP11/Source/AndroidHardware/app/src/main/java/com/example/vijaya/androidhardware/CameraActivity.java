@@ -3,33 +3,48 @@ package com.example.vijaya.androidhardware;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.provider.MediaStore;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class CameraActivity extends AppCompatActivity {
-    public static final int CAMERA_REQ = 01;
+
+    int TAKE_PHOTO_CODE = 0;
+    ImageView userImage;
+    private static final int MY_CAMERA_REQUEST_CODE = 100;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
+        Button capture = (Button) findViewById(R.id.btn_take_photo);
+        userImage = (ImageView) findViewById(R.id.view_photo);
+
+        // ICP Task2: Write the code to capture the image
+        Intent takepic = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        startActivityForResult(takepic, TAKE_PHOTO_CODE);
+
     }
 
-    public void openCamera(View view) {
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        startActivityForResult(intent, CAMERA_REQ);
+    public void callCamera(View v) {
+        Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (cameraIntent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(cameraIntent, TAKE_PHOTO_CODE);
+        }
     }
 
+    //If the photo is captured then set the image view to the photo captured.
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == CAMERA_REQ) {
-            Bitmap bitmap = (Bitmap) data.getExtras().get("data");
-            ImageView imgV = findViewById(R.id.iv_image);
-            imgV.setImageBitmap(bitmap);
+        if (requestCode == TAKE_PHOTO_CODE && resultCode == RESULT_OK) {
+            Bitmap photo = (Bitmap) data.getExtras().get("data");
+            userImage.setImageBitmap(photo);
+            Log.d("CameraDemo", "Pic saved");
         }
     }
 
@@ -38,4 +53,3 @@ public class CameraActivity extends AppCompatActivity {
         startActivity(redirect);
     }
 }
-

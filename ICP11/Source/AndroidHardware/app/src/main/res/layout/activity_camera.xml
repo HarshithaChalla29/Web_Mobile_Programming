@@ -4,35 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CameraActivity">
+    android:background="#000000"
+    tools:context="com.example.vijaya.androidhardware.CameraActivity">
+
+    <ImageView
+        android:id="@+id/view_photo"
+        android:layout_width="260dp"
+        android:layout_height="374dp"
+        android:layout_above="@+id/btn_take_photo"
+        android:layout_alignEnd="@+id/btn_photo_home"
+        android:layout_alignRight="@+id/btn_photo_home"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true" />
 
     <Button
-        android:id="@+id/btn_Camera"
-        android:layout_width="match_parent"
+        android:id="@+id/btn_take_photo"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:onClick="openCamera"
-        android:background="#EA855C"
-        android:text="Camera"
-        />
-    <ImageView
-        android:id="@+id/iv_image"
-        android:layout_width="400dp"
-        android:layout_height="280dp"
-        android:layout_below="@+id/btn_Camera"
-        android:layout_marginTop="50dp" />
+        android:layout_centerInParent="true"
+        android:background="#000000"
+        android:onClick="callCamera"
+        android:text="Take photo"
+        android:textColor="#FFFFFF" />
+
     <Button
-        android:layout_width="match_parent"
+        android:id="@+id/btn_photo_home"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HOME"
-        android:id="@+id/btn_home"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="10dp"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
-        android:background="#EA855C"
-        android:onClick="redirectToHome"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentLeft="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="69dp"
+        android:background="#000000"
+        android:onClick="redirectToHome"
+        android:text="Home"
+        android:textColor="#FFFFFF" />
 
 </RelativeLayout>
