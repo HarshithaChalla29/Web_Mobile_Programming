@@ -43,7 +43,7 @@ public class QueryUtils {
         try {
             //TODO: 1. Create a URL from the requestUrl string and make a GET request to it
             url = new URL(requestUrl);
-            //TODO: 2. Read from the Url Connection and store it as a string(jsonResponse
+            //TODO: 2. Read from the Url Connection and store it as a string(jsonResponse)
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
             InputStream in = new BufferedInputStream(urlConnection.getInputStream());
             BufferedReader reader = new BufferedReader(new InputStreamReader(in));
