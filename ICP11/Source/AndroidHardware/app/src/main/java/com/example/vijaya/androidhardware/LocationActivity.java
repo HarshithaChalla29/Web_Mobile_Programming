@@ -81,7 +81,7 @@ public class LocationActivity extends AppCompatActivity implements OnMapReadyCal
         }
 
         //Getting the current location of the user.
-//PART 1 ---------------------------------------------------------------------------------------
+
         userCurrentLocation.requestLocationUpdates(LocationManager.GPS_PROVIDER,
                 0,0,userCurrentLocationListener);
         latitute = userCurrentLocation

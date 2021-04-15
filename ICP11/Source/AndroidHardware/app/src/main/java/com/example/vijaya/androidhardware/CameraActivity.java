@@ -27,7 +27,6 @@ public class CameraActivity extends AppCompatActivity {
         // ICP Task2: Write the code to capture the image
         Intent takepic = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(takepic, TAKE_PHOTO_CODE);
-
     }
 
     public void callCamera(View v) {
